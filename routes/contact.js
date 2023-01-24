@@ -74,7 +74,7 @@ router.delete('/:_id', async(req, res) => {
     try {
         const {_id} = req.params
         await Contact.findOneAndDelete({_id});
-        res.status(200).send({msg: "Contact deleted", oneContact});
+        res.status(200).send({msg: "Contact deleted"});
     } catch (error) {
         res.status(400).send({msg: "Can not delete the contact with this id !!", error}); 
     }
